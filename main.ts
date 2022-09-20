@@ -18,7 +18,7 @@ function SSR() {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        ${resetCSS} ${typographyCSS}
+        ${typographyCSS}
         <style>
           body[dsd-pending] {
             display: none;
@@ -96,7 +96,6 @@ function SSR() {
   `;
 }
 
-const resetCSS = `<style>:where(:not(html,iframe,canvas,img,svg,video,audio):not(svg *,symbol *)){all:unset;display:revert}*,::after,::before{box-sizing:border-box}a,button{cursor:revert}menu,ol,ul{list-style:none}img{max-width:100%}table{border-collapse:collapse}input,textarea{-webkit-user-select:auto}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}::placeholder{color:unset}:where([hidden]){display:none}:where([contenteditable]:not([contenteditable=false])){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;-webkit-user-select:auto}:where([draggable=true]){-webkit-user-drag:element}</style>`;
 const typographyCSS = `<style>
 :root {
   --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
