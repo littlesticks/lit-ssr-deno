@@ -20,11 +20,17 @@ function SSR() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         ${typographyCSS}
         <style>
+          :root {
+            --background-color: #fafafa;
+            --text-color: #212121;
+          }
           body[dsd-pending] {
             display: none;
           }
           html,
           body {
+            background-color: var(--background-color);
+            color: var(--text-color);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
               Helvetica, Arial, sans-serif, 'Apple Color Emoji',
               'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -46,6 +52,12 @@ function SSR() {
             background-color: black;
             color: white;
             border-radius: 0.5rem;
+          }
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --background-color: #212121;
+              --text-color: #fafafa;
+            }
           }
         </style>
       </head>
