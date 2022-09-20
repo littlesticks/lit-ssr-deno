@@ -1,6 +1,6 @@
 import { serve } from 'https://deno.land/std@0.145.0/http/server.ts';
 import { router } from 'https://crux.land/router@0.0.12';
-import './simple-greeting.js'
+// import './simple-greeting.js'
 
 serve(
   router({
@@ -39,7 +39,7 @@ function SSR() {
             justify-content: center;
           }
           p {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
           }
           pre code {
             padding: 0.5rem 1rem;
