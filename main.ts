@@ -1,13 +1,12 @@
 import { serve } from 'https://deno.land/std@0.145.0/http/server.ts';
-import { router } from 'https://crux.land/router@0.0.12';
-// import './simple-greeting.js'
+import { router } from "https://crux.land/api/get/dtDGn.ts";
 
 serve(
   router({
     '/': (_req) => {
       return new Response(SSR(), { headers: { 'content-type': 'text/html' } });
     },
-  })
+  }),
 );
 
 function SSR() {

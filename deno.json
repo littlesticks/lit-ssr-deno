@@ -8,6 +8,6 @@
     ]
   },
   "tasks": {
-    "start": "deno run -A --config ./deno.json main.ts"
+    "start": "deno run -A --config ./deno.json --watch main.ts"
   }
 }
